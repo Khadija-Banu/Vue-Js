@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <p>{{title}}</p>
+        <p>{{cars[0]}}</p>
+        <p>{{robot.name}}</p>
+        <p>{{greeting()}}</p>
+        <p>{{extra()}}</p>
+        <a v-bind:href="link">click me</a>
+        <p v-text="mytext"></p>
+        <p v-html="myhtml"></p>
+
+        <p v-if="age>=extraage">
+            you are good to go
+        </p>
+        <p v-else-if="changeuser()">
+            you are good
+        </p>
+        <p v-else>
+            you are not good to go
+        </p>
+        
+
+        <p v-for="(car,index) in cars">{{index}}:{{car}}</p>
+        <p v-for="(robo,index,key) in robot">{{key}} : {{index}} : {{robo}}</p>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
